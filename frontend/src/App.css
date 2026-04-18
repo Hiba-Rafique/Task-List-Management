@@ -360,3 +360,242 @@ input:checked + .slider:before {
   margin-right: 12px;
   box-shadow: 0 0 0 3px rgba(52, 29, 167, 0.1);
 }
+
+/* KEEP YOUR ORIGINAL STYLES ABOVE (UNCHANGED) */
+/* ONLY ADD/FIX BELOW */
+
+.container {
+width: 100%;
+min-height: 100vh;
+padding: 40px 20px;
+}
+
+/* FULL SCREEN FIX */
+body, #root {
+margin: 0;
+padding: 0;
+min-height: 100vh;
+}
+
+/* ========================= */
+/* 🚀 ENGAGING MODE */
+/* ========================= */
+
+/* Cover the full viewport with the dark gradient */
+body.engaging-active {
+  background: linear-gradient(135deg, #020617, #0f172a, #1e293b, #020617);
+  background-size: 400% 400%;
+  animation: gradientMove 10s ease infinite;
+}
+
+@keyframes gradientMove {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.container.engaging {
+  color: #f1f5f9;
+  background: transparent; /* body handles the bg */
+  max-width: 100%;
+  padding: 40px 60px;
+}
+
+/* Inner board still centered */
+.container.engaging header,
+.container.engaging .board,
+.container.engaging .gamification-card {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* SUBTITLE */
+.container.engaging .subtitle {
+  color: #94a3b8;
+}
+
+/* TEXT */
+.container.engaging .task-text {
+  color: #f8fafc;
+}
+
+.container.engaging .task-done .task-text {
+  color: #64748b;
+}
+
+/* TASK COUNT BADGE */
+.container.engaging .task-count {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+  color: #94a3b8;
+}
+
+/* INPUT */
+.container.engaging .task-input {
+  background: rgba(255,255,255,0.08);
+  color: #f1f5f9;
+  border: 1.5px solid rgba(255,255,255,0.18);
+}
+
+.container.engaging .task-input::placeholder {
+  color: #64748b;
+}
+
+.container.engaging .task-input:focus {
+  border-color: #22c55e;
+  box-shadow: 0 0 0 3px rgba(34,197,94,0.15);
+}
+
+/* COLUMNS */
+.container.engaging .column {
+  background: rgba(255,255,255,0.04);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.09);
+  box-shadow: 0 0 30px rgba(34,197,94,0.12);
+}
+
+/* TASK CARDS */
+.container.engaging .task-card {
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: #f8fafc;
+}
+
+.container.engaging .task-done {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+/* EMPTY STATE */
+.container.engaging .empty-state {
+  background: rgba(255,255,255,0.02);
+  border: 2px dashed rgba(255,255,255,0.1);
+  color: #475569;
+}
+
+/* EDIT INPUT */
+.container.engaging .edit-input {
+  background: rgba(255,255,255,0.1);
+  color: #f1f5f9;
+  border-color: #22c55e;
+}
+
+/* ACTION BUTTONS */
+.container.engaging .edit-btn,
+.container.engaging .del-btn {
+  background: rgba(255,255,255,0.08);
+  color: #94a3b8;
+}
+
+.container.engaging .edit-btn:hover {
+  background: rgba(34,197,94,0.2);
+  color: #22c55e;
+}
+
+.container.engaging .del-btn:hover {
+  background: rgba(239,68,68,0.2);
+  color: #f87171;
+}
+
+/* TITLE */
+.container.engaging h1 {
+  color: #22c55e;
+  text-shadow: 0 0 20px rgba(34,197,94,0.5), 0 0 60px rgba(34,197,94,0.2);
+}
+
+/* TOGGLE LABEL */
+.container.engaging .toggle-label {
+  color: #94a3b8;
+}
+
+/* BUTTON */
+.container.engaging .add-btn {
+  background: linear-gradient(135deg, #16a34a, #22c55e);
+  box-shadow: 0 0 20px rgba(34,197,94,0.3);
+}
+
+.container.engaging .add-btn:hover {
+  background: linear-gradient(135deg, #22c55e, #4ade80);
+  box-shadow: 0 0 30px rgba(34,197,94,0.5);
+}
+
+/* COLUMN TITLES */
+.container.engaging .column-todo .column-title    { color: #60a5fa; }
+.container.engaging .column-in-progress .column-title { color: #fbbf24; }
+.container.engaging .column-done .column-title    { color: #22c55e; }
+
+/* CARD HOVER */
+.container.engaging .task-card:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 0 24px rgba(34,197,94,0.35);
+  border-color: rgba(34,197,94,0.4);
+}
+
+/* 🎮 GAMIFICATION */
+.gamification-card {
+  margin: 30px auto;
+  padding: 24px 32px;
+  max-width: 500px;
+  border-radius: 20px;
+  text-align: center;
+  background: rgba(255,255,255,0.04);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255,255,255,0.09);
+  box-shadow: 0 0 40px rgba(34,197,94,0.15);
+}
+
+.gamification-card h3 {
+  color: #22c55e;
+  margin: 0 0 4px 0;
+  font-size: 20px;
+}
+
+.gamification-card p {
+  color: #94a3b8;
+  margin: 0 0 14px 0;
+}
+
+.progress-bar.big {
+  height: 10px;
+  border-radius: 99px;
+  background: rgba(255,255,255,0.08);
+  overflow: hidden;
+  margin: 10px 0 14px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #16a34a, #22c55e, #4ade80);
+  border-radius: 99px;
+  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 0 10px rgba(34,197,94,0.6);
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  color: #94a3b8;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+.board {
+flex-direction: column;
+}
+
+.input-group {
+flex-direction: column;
+}
+
+.add-btn {
+width: 100%;
+}
+
+h1 {
+font-size: 42px;
+}
+}
