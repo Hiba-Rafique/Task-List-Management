@@ -1,0 +1,19 @@
+{
+  "name": "tasco-backend",
+  "version": "1.0.0",
+  "description": "Backend API for Tasco Task List Management",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^16.6.1",
+    "express": "^4.22.1",
+    "mongoose": "^8.23.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
